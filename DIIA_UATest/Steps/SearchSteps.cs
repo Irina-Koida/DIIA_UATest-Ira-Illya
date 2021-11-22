@@ -1,8 +1,8 @@
 ﻿using OpenQA.Selenium;
-using DIIA_UITest.POM;
+using DIIA_UATest.POM;
 using TechTalk.SpecFlow;
 
-namespace DIIA_UITest.Steps
+namespace DIIA_UATest.Steps
 {
     [Binding]
     public class SearchSteps

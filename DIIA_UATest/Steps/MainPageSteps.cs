@@ -1,8 +1,8 @@
 ﻿using TechTalk.SpecFlow;
 using OpenQA.Selenium;
-using DIIA_UITest.POM;
+using DIIA_UATest.POM;
 
-namespace DIIA_UITest.Steps
+namespace DIIA_UATest.Steps
 {
     [Binding]
     public sealed class MainPageSteps

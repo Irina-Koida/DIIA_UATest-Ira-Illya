@@ -1,19 +1,17 @@
 ﻿Feature: NewsSection
 	As a visitor
-    I want to search information on the main page
-	In order to quickly find the information I need
+    I want to see the news section on the main page
+	In order to read the hot news 
 
 Background:
 	Given Main page is open
 
 @newssection
-Scenario: Check the search result witn valid input
-	When I input "ФОП" in the search field
-	When I click a search button
-	Then I see a open  search page with text "За вашим запитом знайдено матеріалів:"
+Scenario: Check navigation to the news page from the block with news
+	When I click on the all news button
+	Then I navigated to the news page
 
 @newssection
-Scenario: Check the search results page for the content of the message if invalid values are entered
-	When I input "FOP" in the search field
-	When I click a search button
-	Then I see a open  search page with text "За вашим запитом не знайдено матеріалів"
+Scenario: Check navigation to the select news page from the block with news
+	When I click on the selected news title
+	Then I navigated to the selected news page

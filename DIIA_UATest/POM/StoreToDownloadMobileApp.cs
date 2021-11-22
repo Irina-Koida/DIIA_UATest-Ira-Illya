@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace DIIA_UITest.POM
+namespace DIIA_UATest.POM
 {
     class StoreToDownloadMobileApp
     {
