@@ -12,9 +12,9 @@ namespace DIIA_UATest.POM
         }
 
 
-        private readonly By _clickOnAllNewsButton = By.XPath("//*[@id='layout - main']/section[4]/div/div[1]/div[2]/div/a/span");
-        private readonly By _clickOnSelectedNewsTitle = By.XPath("//*[@id='layout - main']/section[4]/div/div[2]/div[1]/div/div[2]/a");
-        private readonly By _goToSelectedNews = By.XPath("//*[@id='layout - main']/section[1]/div/div[1]/div/div/div[1]");
+        private readonly By _clickOnAllNewsButton = By.XPath("//*[@id='layout-main']/section[4]/div/div[1]/div[2]/div/a/span");
+        private readonly By _clickOnSelectedNewsTitle = By.XPath("//*[@id='layout-main']/section[4]/div/div[2]/div[2]/div/div[3]/div/div/a");
+        private readonly By _goToSelectedNews = By.XPath("//*[@id='layout-main']/section[1]/div/div[1]/div/div/div[1]");
         private readonly By _goToAllNewsPage = By.XPath("//*[@id='posts-container']/div[1]/div/h1");
 
         public void ClickAllNewsPageButton() =>

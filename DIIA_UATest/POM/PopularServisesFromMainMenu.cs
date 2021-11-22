@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using System;
 
 namespace DIIA_UATest.POM
 {
@@ -49,18 +50,18 @@ namespace DIIA_UATest.POM
             return this;
         }
 
-        //public PopularServisesFromMainMenu GoToPopularServicePage()
-        //{
-        //    _webDriver.Navigate().GoToUrl("https://diia.gov.ua/services/covid19-sertifikat-pro-vakcinaciyu");
-        //    return this;
-        //}
+        public void ClickToPopularServicePage()
+        {
+            _webDriver.FindElement(_cookieClose).Click();
+            _webDriver.FindElement(_clickToPopularServises).Click();
+        }
 
-        public void ClickToPopularServicePage() =>
-           _webDriver.FindElement(_clickToPopularServises).Click();
-
-        public void GoToToPopularServicePage() =>
-         _webDriver.FindElement(_goToPopularServises);
-
+        public void GoToToPopularServicePage()
+        {
+            _webDriver.FindElement(_goToPopularServises);
+            _webDriver.FindElement(_cookieClose).Click();
+        }
+       
         public void MovedToTheRight() =>
             _webDriver.FindElement(_movedOneRight);
         

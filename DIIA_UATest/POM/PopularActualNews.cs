@@ -52,8 +52,11 @@ namespace DIIA_UATest.POM
         //    return this;
         //}
 
-        public void ClickToSelectedNews() =>
-          _webDriver.FindElement(_clickOnSelectedNews).Click();
+        public void ClickToSelectedNews()
+        {
+            _webDriver.FindElement(_cookieClose).Click();
+            _webDriver.FindElement(_clickOnSelectedNews).Click();
+        }
 
         public void GoToSelectedNewsPage() =>
             _webDriver.FindElement(_goToSelectedNewsPage);
