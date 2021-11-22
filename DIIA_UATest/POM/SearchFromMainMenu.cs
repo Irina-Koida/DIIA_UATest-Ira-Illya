@@ -20,14 +20,10 @@ namespace DIIA_UATest.POM
             _webDriver.FindElement(_clickOnSeachInformationField).SendKeys(Keys.Enter);
         }
 
-        public void ClickOnSearchInformationField()
-        {
-            _webDriver.FindElement(_clickOnSeachInformationField).Click();
-        }
+        public void ClickOnSearchInformationField() =>
+           _webDriver.FindElement(_clickOnSeachInformationField).Click();
 
-        public void SearchInfoRequestText()
-        {
+        public void SearchInfoRequestText() =>
             _webDriver.FindElement(_searchRequestTextInfo);
-        }
     }
 }

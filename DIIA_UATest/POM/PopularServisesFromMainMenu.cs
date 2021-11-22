@@ -18,6 +18,8 @@ namespace DIIA_UATest.POM
         private readonly By _cookieClose = By.CssSelector("[class='cookies-1_close']");
         private readonly By _swipeLeft = By.XPath("//*[@id='gromadyanam']/div[1]/div/div[3]/span[1]");
         private readonly By _swipeRight = By.XPath("//*[@id='gromadyanam']/div[1]/div/div[3]/span[2]");
+        private readonly By _clickToPopularServises = By.XPath("//*[@id='gromadyanam']/div[1]/div/div[2]/div[1]/div[1]/div/a");
+        private readonly By _goToPopularServises = By.XPath("//*[@id='layout-main']/section[1]/div[1]/div/div[3]/div[1]");
 
         public PopularServisesFromMainMenu SwipeToTheRightClick()
         {
@@ -47,20 +49,22 @@ namespace DIIA_UATest.POM
             return this;
         }
 
-        public PopularServisesFromMainMenu GoToPopularServicePage()
-        {
-            _webDriver.Navigate().GoToUrl("https://diia.gov.ua/services/covid19-sertifikat-pro-vakcinaciyu");
-            return this;
-        }
+        //public PopularServisesFromMainMenu GoToPopularServicePage()
+        //{
+        //    _webDriver.Navigate().GoToUrl("https://diia.gov.ua/services/covid19-sertifikat-pro-vakcinaciyu");
+        //    return this;
+        //}
 
-        public void MovedToTheRight()
-        {
+        public void ClickToPopularServicePage() =>
+           _webDriver.FindElement(_clickToPopularServises).Click();
+
+        public void GoToToPopularServicePage() =>
+         _webDriver.FindElement(_goToPopularServises);
+
+        public void MovedToTheRight() =>
             _webDriver.FindElement(_movedOneRight);
-        }
-
-        public void MovedToTheLeft()
-        {
+        
+        public void MovedToTheLeft() =>
             _webDriver.FindElement(_movedOneLeft);
-        }
     }
 }

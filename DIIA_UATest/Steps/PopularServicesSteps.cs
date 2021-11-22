@@ -21,7 +21,7 @@ namespace DIIA_UATest.Steps
         [When(@"I click on the first service")]
         public void WhenIClickOnTheFirstService()
         {
-            _popularServisesFromMainMenu.GoToPopularServicePage();
+            _popularServisesFromMainMenu.ClickToPopularServicePage();
         }
 
         [When(@"I click on the swiper rigt button")]
@@ -51,7 +51,7 @@ namespace DIIA_UATest.Steps
         [Then(@"I navigate to the service page")]
         public void ThenINavigateToTheServicePage()
         {
-            _popularServisesFromMainMenu.GoToPopularServicePage();
+            _popularServisesFromMainMenu.GoToToPopularServicePage();
         }
 
         [Then(@"Popular servises moved right on one position")]

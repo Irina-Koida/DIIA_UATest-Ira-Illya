@@ -45,7 +45,7 @@ namespace DIIA_UATest.Steps
         [When(@"I click on the first news")]
         public void WhenIClickOnTheFirstNews()
         {
-            _popularActualNews.GoToSelectNewsPage();
+            _popularActualNews.ClickToSelectedNews();
         }
 
         [Then(@"The pagination number of next page are active")]
@@ -69,7 +69,7 @@ namespace DIIA_UATest.Steps
         [Then(@"I navigate to the news page")]
         public void ThenINavigateToTheNewsPage()
         {
-            _popularActualNews.GoToSelectNewsPage();
+            _popularActualNews.GoToSelectedNewsPage();
         }
     }
 }
