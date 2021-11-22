@@ -23,6 +23,8 @@ namespace DIIA_UATest.POM
         private readonly By _plaginationNext = By.XPath(".//*[@id='post-navigation']/ul/li[3]/span");
         private readonly By _plaginationPrevious = By.XPath("//*[@id='post-navigation']/ul/li[2]/a");
         private readonly By _cookieClose = By.CssSelector("[class = 'cookies-1_close']");
+        private readonly By _clickOnSelectedNews = By.XPath("//*[@id='posts-items-box']/div[1]/div/a[2]");
+        private readonly By _goToSelectedNewsPage = By.XPath("//*[@id='layout-main']/section[1]/div/div[1]/div/div/div[1]");
 
         public PopularActualNews СlickMoreNewsButton()
         {
@@ -44,20 +46,25 @@ namespace DIIA_UATest.POM
             return this;
         }
 
-        public PopularActualNews GoToSelectNewsPage()
+        //public PopularActualNews GoToSelectNewsPage()
+        //{
+        //    _webDriver.Navigate().GoToUrl("https://diia.gov.ua/news/yak-cifrovizaciya-budivelnih-poslug-na-portali-diya-boretsya-z-korupciyeyu-rezultati-opituvannya");
+        //    return this;
+        //}
+
+        public void ClickToSelectedNews()
         {
-            _webDriver.Navigate().GoToUrl("https://diia.gov.ua/news/yak-cifrovizaciya-budivelnih-poslug-na-portali-diya-boretsya-z-korupciyeyu-rezultati-opituvannya");
-            return this;
+            _webDriver.FindElement(_cookieClose).Click();
+            _webDriver.FindElement(_clickOnSelectedNews).Click();
         }
 
-        public void SeeAActivePlaginationNextPage()
-        {
+        public void GoToSelectedNewsPage() =>
+            _webDriver.FindElement(_goToSelectedNewsPage);
+
+        public void SeeAActivePlaginationNextPage() =>
             _webDriver.FindElement(_plaginationNext);
-        }
-
-        public void SeeAActivePlaginationPreviousPage()
-        {
-            _webDriver.FindElement(_plaginationPrevious);
-        }
+        
+        public void SeeAActivePlaginationPreviousPage() =>
+            _webDriver.FindElement(_plaginationPrevious); 
     }
 }

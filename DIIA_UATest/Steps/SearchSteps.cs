@@ -31,9 +31,14 @@ namespace DIIA_UATest.Steps
         }
 
         [Then(@"I see a open  search page with text ""(.*)""")]
-        public void ThenISeeAOpenSearchPageWithText()
+        public void ThenISeeAOpenSearchPageWithTextInvalid(string request)
         {
-            _searchFromMainMenu.SearchInfoRequestText();
+            _searchFromMainMenu.SearchInfoRequestText(request);
+
         }
     }
 }
+
+
+    
+

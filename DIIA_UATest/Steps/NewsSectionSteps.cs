@@ -29,7 +29,7 @@ namespace DIIA_UATest.Steps
         [When(@"I click on the selected news title")]
         public void WhenIClickOnTheSelectedNewsTitle()
         {
-            _newsSectionMainMenu.GoToSelectedNews();
+            _newsSectionMainMenu.ClickToSelectedNewsTitle();
         }
         
         [Then(@"I navigated to the news page")]

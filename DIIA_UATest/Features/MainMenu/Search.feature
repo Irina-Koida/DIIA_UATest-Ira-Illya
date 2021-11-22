@@ -10,7 +10,7 @@ Background:
 Scenario: Check the search result witn valid input
 	When I input "ФОП" in the search field
 	When I click a search button
-	Then I see a open  search page with text "За вашим запитом знайдено матеріалів:"
+	Then I see a open  search page with text "За вашим запитом знайдено матеріалів"
 
 @invalid
 Scenario: Check the search results page for the content of the message if invalid values are entered
