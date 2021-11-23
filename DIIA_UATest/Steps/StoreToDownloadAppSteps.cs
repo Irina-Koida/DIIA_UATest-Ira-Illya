@@ -40,19 +40,22 @@ namespace DIIA_UATest.Steps
         [Then(@"The App Store page to download the Diya app is open")]
         public void ThenTheAppStorePageToDownloadTheDiyaAppIsOpen()
         {
-            _storeToDownloadMobileApp.GoToApplePage();
+          Assert.AreEqual("https://apps.apple.com/us/app/%D0%B4%D1%96%D1%8F/id1489717872",
+              _storeToDownloadMobileApp.GoToApplePage());
         }
 
         [Then(@"The Google Play page to download the Diya app is open")]
         public void ThenTheGooglePlayPageToDownloadTheDiyaAppIsOpen()
         {
-            _storeToDownloadMobileApp.GoToGooglePage();
+           Assert.AreEqual("https://play.google.com/store/apps/details?id=ua.gov.diia.app", 
+               _storeToDownloadMobileApp.GoToGooglePage());
         }
 
         [Then(@"The HUAWEI AppGallery page to download the Diya app is open")]
         public void ThenTheHUAWEIAppGalleryPageToDownloadTheDiyaAppIsOpen()
         {
-            _storeToDownloadMobileApp.GoToHuaweiPage();
+          Assert.AreEqual("https://appgallery.huawei.com/app/C102057503?appId=C102057503&source=appshare&subsource=C102057503", 
+              _storeToDownloadMobileApp.GoToHuaweiPage());
         }
     }
 }
