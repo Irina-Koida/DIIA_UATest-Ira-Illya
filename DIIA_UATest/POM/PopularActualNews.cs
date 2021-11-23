@@ -46,14 +46,23 @@ namespace DIIA_UATest.POM
 
         public void ClickToSelectedNews() =>
             _webDriver.FindElement(_clickOnSelectedNews).Click();
-        
-        public void GoToSelectedNewsPage() =>
-            _webDriver.FindElement(_goToSelectedNewsPage);
 
-        public void SeeAActivePlaginationNextPage() =>
+        public PopularActualNews GoToSelectedNewsPage()
+        {
+            _webDriver.FindElement(_goToSelectedNewsPage);
+            return this;
+        }
+            
+        public PopularActualNews SeeAActivePlaginationNextPage()
+        {
             _webDriver.FindElement(_plaginationNext).GetAttribute("class").Contains("active");
-        
-        public void SeeAActivePlaginationPreviousPage() =>
-            _webDriver.FindElement(_plaginationPrevious).GetAttribute("class").Contains("active"); 
+            return this;
+        }   
+
+        public PopularActualNews SeeAActivePlaginationPreviousPage()
+        {
+            _webDriver.FindElement(_plaginationPrevious).GetAttribute("class").Contains("active");
+            return this;
+        }      
     }
 }
