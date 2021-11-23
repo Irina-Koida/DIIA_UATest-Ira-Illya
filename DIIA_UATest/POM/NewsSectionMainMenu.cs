@@ -23,10 +23,16 @@ namespace DIIA_UATest.POM
         public void ClickToSelectedNewsTitle() =>
             _webDriver.FindElement(_clickOnSelectedNewsTitle).Click();
 
-        public void GoToSelectedNews() =>
+        public NewsSectionMainMenu GoToSelectedNews()
+        {
             _webDriver.FindElement(_goToSelectedNews);
-        
-        public void GoToAllNewsPage() =>
-            _webDriver.FindElement(_goToAllNewsPage); 
+            return this;
+        }
+          
+        public NewsSectionMainMenu GoToAllNewsPage()
+        {
+            _webDriver.FindElement(_goToAllNewsPage);
+            return this;
+        }    
     }
 }

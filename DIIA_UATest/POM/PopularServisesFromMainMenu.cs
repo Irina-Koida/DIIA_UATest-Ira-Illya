@@ -29,7 +29,7 @@ namespace DIIA_UATest.POM
 
         public PopularServisesFromMainMenu SwipeToTheLeftClick()
         {
-            _webDriver.FindElement(_swipeRight).Click();
+            _webDriver.FindElement(_swipeLeft).Click();
             return this;
         }
 
@@ -41,21 +41,23 @@ namespace DIIA_UATest.POM
 
         public PopularServisesFromMainMenu ClickToTheLeftSide()
         {
-            _webDriver.FindElement(_clickRightButton).Click();
+            _webDriver.FindElement(_clikLeftButton).Click();
             return this;
         }
 
         public void ClickToPopularServicePage() =>
             _webDriver.FindElement(_clickToPopularServises).Click();
         
-
-        public void GoToToPopularServicePage() =>
-           _webDriver.FindElement(_goToPopularServises);
-       
-        public void MovedToTheRight() =>
-            _webDriver.FindElement(_movedOneRight);
+        public PopularServisesFromMainMenu GoToToPopularServicePage()
+        {
+            _webDriver.FindElement(_goToPopularServises);
+            return this;
+        }
         
-        public void MovedToTheLeft() =>
-            _webDriver.FindElement(_movedOneLeft);
+        public bool MovedToTheRight() =>
+            _webDriver.FindElement(_movedOneRight).GetAttribute("class").Contains("active"); 
+          
+        public bool MovedToTheLeft() =>
+            _webDriver.FindElement(_movedOneLeft).GetAttribute("class").Contains("active");   
     }
 }

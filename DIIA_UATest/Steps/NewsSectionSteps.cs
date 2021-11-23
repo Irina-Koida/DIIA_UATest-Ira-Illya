@@ -40,7 +40,8 @@ namespace DIIA_UATest.Steps
         [Then(@"I navigated to the selected news page")]
         public void ThenINavigatedToTheSelectedNewsPage()
         {
-            _newsSectionMainMenu.GoToSelectedNews();
+            Assert.AreEqual("Більше половини українців з Android користуються Дією — дослідження",
+                _newsSectionMainMenu.GoToSelectedNews());
         }
     }
 }
