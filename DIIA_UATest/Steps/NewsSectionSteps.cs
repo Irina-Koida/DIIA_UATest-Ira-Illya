@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using TechTalk.SpecFlow;
 using DIIA_UATest.POM;
+using NUnit.Framework;
 
 namespace DIIA_UATest.Steps
 {
@@ -33,7 +34,7 @@ namespace DIIA_UATest.Steps
         [Then(@"I navigated to the news page")]
         public void ThenINavigatedToTheNewsPage()
         {
-            _newsSectionMainMenu.GoToAllNewsPage();
+           Assert.AreEqual( "Новини", _newsSectionMainMenu.GoToAllNewsPage());
         }
         
         [Then(@"I navigated to the selected news page")]

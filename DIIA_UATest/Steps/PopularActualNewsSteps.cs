@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using TechTalk.SpecFlow;
 using DIIA_UATest.POM;
+using NUnit.Framework;
 
 namespace DIIA_UATest.Steps
 {
