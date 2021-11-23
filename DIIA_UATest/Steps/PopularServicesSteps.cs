@@ -19,10 +19,10 @@ namespace DIIA_UATest.Steps
             _popularServisesFromMainMenu = new PopularServisesFromMainMenu(_webDriver);
         }
 
-        [When(@"I click on the first service")]
-        public void WhenIClickOnTheFirstService()
+        [When(@"I click on the first ""(.*)""")]
+        public void WhenIClickOnTheFirst(string servises)
         {
-            _popularServisesFromMainMenu.ClickToPopularServicePage();
+            _popularServisesFromMainMenu.ClickToPopularServicePage(servises);
         }
 
         [When(@"I click on the swiper rigt button")]
@@ -49,10 +49,10 @@ namespace DIIA_UATest.Steps
             _popularServisesFromMainMenu.SwipeToTheLeftClick();
         }
 
-        [Then(@"I navigate to the service page")]
-        public void ThenINavigateToTheServicePage()
+        [Then(@"I navigate to the service ""(.*)""")]
+        public void ThenINavigateToTheService(string servisePage)
         {
-          Assert.AreEqual("COVID-сертифікат про вакцинацію", _popularServisesFromMainMenu.GoToToPopularServicePage());
+            Assert.AreEqual(servisePage, _popularServisesFromMainMenu.GoToToPopularServicePage());
         }
 
         [Then(@"Popular servises moved right on one position")]

@@ -14,5 +14,5 @@ Scenario: Check navigation to the news page from the block with news
 
 @newssection
 Scenario: Check navigation to the select news page from the block with news
-	When I click on the selected news title
-	Then I navigated to the selected news page
+	When I click on the selected news "title"
+	Then I navigated to the selected news "page"

@@ -43,10 +43,10 @@ namespace DIIA_UATest.Steps
             _popularActualNews.ClikPreviousPageButton();
         }
 
-        [When(@"I click on the first news")]
-        public void WhenIClickOnTheFirstNews()
+        [When(@"I click on the ""(.*)""")]
+        public void WhenIClickOnThe(string firstNews)
         {
-            _popularActualNews.ClickToSelectedNews();
+            _popularActualNews.ClickToSelectedNews(firstNews);
         }
 
         [Then(@"The pagination number of next page are active")]
@@ -67,12 +67,10 @@ namespace DIIA_UATest.Steps
            Assert.IsTrue(_popularActualNews.SeeAActivePlaginationPreviousPage());
         }
 
-        [Then(@"I navigate to the news page")]
-        public void ThenINavigateToTheNewsPage()
+        [Then(@"I navigate to the ""(.*)""")]
+        public void ThenINavigateToThe(string selectedNewsPage)
         {
-            Assert.AreEqual("Мстислав Банік на Західній Україні: «Вражає швидкість," +
-                " з якою на місцях підтримали ініціативу створення офлайн-пунктів Команди підтримки Дії»",
-                _popularActualNews.GoToSelectedNewsPage());
+            Assert.AreEqual(selectedNewsPage, _popularActualNews.GoToSelectedNewsPage());
         }
     }
 }

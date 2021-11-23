@@ -45,7 +45,7 @@ namespace DIIA_UATest.POM
             return this;
         }
 
-        public void ClickToPopularServicePage() =>
+        public void ClickToPopularServicePage(string servises) =>
             _webDriver.FindElement(_clickToPopularServises).Click();
         
         public PopularServisesFromMainMenu GoToToPopularServicePage()
