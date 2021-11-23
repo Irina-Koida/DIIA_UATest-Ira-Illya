@@ -22,5 +22,11 @@ namespace DIIA_UATest.Steps
         {
             _mainPage.GoToMainPage();
         }
+
+        [Given(@"Cookie is closed")]
+        public void CookieIsClosed()
+        {
+            _mainPage.CloseCookie();
+        }
     }
 }

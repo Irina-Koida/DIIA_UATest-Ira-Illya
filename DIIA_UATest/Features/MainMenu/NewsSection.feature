@@ -5,6 +5,7 @@
 
 Background:
 	Given Main page is open
+	Given Cookie is closed
 
 @newssection
 Scenario: Check navigation to the news page from the block with news

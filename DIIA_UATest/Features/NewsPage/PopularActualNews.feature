@@ -5,6 +5,7 @@ In order to read the news
 
 Background:
 	Given News page is open
+	Given Cookie is closed
 
 @news
 Scenario: Check that pagination number of next page become active when you click the "More news" button

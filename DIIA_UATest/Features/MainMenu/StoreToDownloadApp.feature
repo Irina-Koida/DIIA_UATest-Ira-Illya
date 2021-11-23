@@ -5,6 +5,7 @@
 
 Background:
 	Given Main page is open
+	Given Cookie is closed
 
 @app
 Scenario: Check the transition to the App Store by click the "Download on the App Store" button

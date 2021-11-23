@@ -11,9 +11,18 @@ namespace DIIA_UATest.POM
             _webDriver = webDriver;
         }
 
+        private readonly By _cookieClose = By.CssSelector("[class = 'cookies-1_close']");
+
+
         public MainPage GoToMainPage()
         {
             _webDriver.Navigate().GoToUrl("https://diia.gov.ua/");
+            return this;
+        }
+
+        public MainPage CloseCookie()
+        {
+            _webDriver.FindElement(_cookieClose).Click();
             return this;
         }
     }
