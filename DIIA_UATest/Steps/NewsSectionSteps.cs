@@ -7,7 +7,6 @@ namespace DIIA_UATest.Steps
     [Binding]
     public class NewsSectionSteps
     {
-
         private readonly ScenarioContext _scenarioContext;
         private readonly NewsSectionMainMenu _newsSectionMainMenu;
         private readonly IWebDriver _webDriver;
@@ -18,7 +17,6 @@ namespace DIIA_UATest.Steps
             _webDriver = _scenarioContext.Get<IWebDriver>("WebDriver");
             _newsSectionMainMenu = new NewsSectionMainMenu(_webDriver);
         }
-
 
         [When(@"I click on the all news button")]
         public void WhenIClickOnTheAllNewsButton()

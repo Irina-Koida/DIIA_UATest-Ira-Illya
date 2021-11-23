@@ -5,6 +5,7 @@
 
 Background:
 	Given Main page is open
+	Given Cookie is closed
 
 @popularservice @swiper
 Scenario: Check navigation to the service page from the block with popular service

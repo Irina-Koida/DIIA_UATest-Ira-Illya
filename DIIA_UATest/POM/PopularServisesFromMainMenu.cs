@@ -16,7 +16,6 @@ namespace DIIA_UATest.POM
         private readonly By _clikLeftButton = By.CssSelector("[class='swiper_services-btn-prev swiper-btn-prev']");
         private readonly By _movedOneRight = By.XPath("//*[@id='gromadyanam']/div[1]/div/div[2]/div[5]/div[1]/div/a");
         private readonly By _movedOneLeft = By.XPath("//*[@id='gromadyanam']/div[1]/div/div[2]/div[4]/div[1]/div/a");
-        private readonly By _cookieClose = By.CssSelector("[class='cookies-1_close']");
         private readonly By _swipeLeft = By.XPath("//*[@id='gromadyanam']/div[1]/div/div[3]/span[1]");
         private readonly By _swipeRight = By.XPath("//*[@id='gromadyanam']/div[1]/div/div[3]/span[2]");
         private readonly By _clickToPopularServises = By.XPath("//*[@id='gromadyanam']/div[1]/div/div[2]/div[1]/div[1]/div/a");
@@ -31,8 +30,6 @@ namespace DIIA_UATest.POM
         public PopularServisesFromMainMenu SwipeToTheLeftClick()
         {
             _webDriver.FindElement(_swipeRight).Click();
-            _webDriver.FindElement(_swipeLeft).Click();
-            _webDriver.FindElement(_cookieClose).Click();
             return this;
         }
 
@@ -45,22 +42,15 @@ namespace DIIA_UATest.POM
         public PopularServisesFromMainMenu ClickToTheLeftSide()
         {
             _webDriver.FindElement(_clickRightButton).Click();
-            _webDriver.FindElement(_clikLeftButton).Click();
-            _webDriver.FindElement(_cookieClose).Click();
             return this;
         }
 
-        public void ClickToPopularServicePage()
-        {
-            _webDriver.FindElement(_cookieClose).Click();
+        public void ClickToPopularServicePage() =>
             _webDriver.FindElement(_clickToPopularServises).Click();
-        }
+        
 
-        public void GoToToPopularServicePage()
-        {
-            _webDriver.FindElement(_goToPopularServises);
-            _webDriver.FindElement(_cookieClose).Click();
-        }
+        public void GoToToPopularServicePage() =>
+           _webDriver.FindElement(_goToPopularServises);
        
         public void MovedToTheRight() =>
             _webDriver.FindElement(_movedOneRight);

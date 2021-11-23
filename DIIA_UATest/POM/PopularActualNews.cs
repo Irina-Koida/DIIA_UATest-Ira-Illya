@@ -22,7 +22,6 @@ namespace DIIA_UATest.POM
         private readonly By _clikPreviousPageButton = By.XPath("//*[@id='post-navigation']/ul/li[1]/a");
         private readonly By _plaginationNext = By.XPath(".//*[@id='post-navigation']/ul/li[3]/span");
         private readonly By _plaginationPrevious = By.XPath("//*[@id='post-navigation']/ul/li[2]/a");
-        private readonly By _cookieClose = By.CssSelector("[class = 'cookies-1_close']");
         private readonly By _clickOnSelectedNews = By.XPath("//*[@id='posts-items-box']/div[1]/div/a[2]");
         private readonly By _goToSelectedNewsPage = By.XPath("//*[@id='layout-main']/section[1]/div/div[1]/div/div/div[1]");
 
@@ -41,30 +40,20 @@ namespace DIIA_UATest.POM
         public PopularActualNews ClikPreviousPageButton()
         {
             _webDriver.FindElement(_clikNextPageButton).Click();
-            _webDriver.FindElement(_cookieClose).Click();
             _webDriver.FindElement(_clikPreviousPageButton).Click();
             return this;
         }
 
-        //public PopularActualNews GoToSelectNewsPage()
-        //{
-        //    _webDriver.Navigate().GoToUrl("https://diia.gov.ua/news/yak-cifrovizaciya-budivelnih-poslug-na-portali-diya-boretsya-z-korupciyeyu-rezultati-opituvannya");
-        //    return this;
-        //}
-
-        public void ClickToSelectedNews()
-        {
-            _webDriver.FindElement(_cookieClose).Click();
+        public void ClickToSelectedNews() =>
             _webDriver.FindElement(_clickOnSelectedNews).Click();
-        }
-
+        
         public void GoToSelectedNewsPage() =>
             _webDriver.FindElement(_goToSelectedNewsPage);
 
         public void SeeAActivePlaginationNextPage() =>
-            _webDriver.FindElement(_plaginationNext);
+            _webDriver.FindElement(_plaginationNext).GetAttribute("class").Contains("active");
         
         public void SeeAActivePlaginationPreviousPage() =>
-            _webDriver.FindElement(_plaginationPrevious); 
+            _webDriver.FindElement(_plaginationPrevious).GetAttribute("class").Contains("active"); 
     }
 }
