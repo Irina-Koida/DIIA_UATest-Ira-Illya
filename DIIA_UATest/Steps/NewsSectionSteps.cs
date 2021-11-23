@@ -24,24 +24,24 @@ namespace DIIA_UATest.Steps
         {
             _newsSectionMainMenu.ClickAllNewsPageButton();
         }
-        
-        [When(@"I click on the selected news title")]
-        public void WhenIClickOnTheSelectedNewsTitle()
+
+        [When(@"I click on the selected news ""(.*)""")]
+        public void WhenIClickOnTheSelectedNews(string title)
         {
-            _newsSectionMainMenu.ClickToSelectedNewsTitle();
+            _newsSectionMainMenu.ClickToSelectedNewsTitle(title);
         }
-        
+
         [Then(@"I navigated to the news page")]
         public void ThenINavigatedToTheNewsPage()
         {
            Assert.AreEqual( "Новини", _newsSectionMainMenu.GoToAllNewsPage());
         }
-        
-        [Then(@"I navigated to the selected news page")]
-        public void ThenINavigatedToTheSelectedNewsPage()
+
+
+        [Then(@"I navigated to the selected news ""(.*)""")]
+        public void ThenINavigatedToTheSelectedNews(string titleSelect)
         {
-            Assert.AreEqual("Більше половини українців з Android користуються Дією — дослідження",
-                _newsSectionMainMenu.GoToSelectedNews());
+            Assert.AreEqual(titleSelect, _newsSectionMainMenu.GoToSelectedNews());
         }
     }
 }

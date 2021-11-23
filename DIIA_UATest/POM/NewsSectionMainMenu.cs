@@ -20,7 +20,7 @@ namespace DIIA_UATest.POM
         public void ClickAllNewsPageButton() =>
             _webDriver.FindElement(_clickOnAllNewsButton).Click();
 
-        public void ClickToSelectedNewsTitle() =>
+        public void ClickToSelectedNewsTitle(string title) =>
             _webDriver.FindElement(_clickOnSelectedNewsTitle).Click();
 
         public NewsSectionMainMenu GoToSelectedNews()
@@ -28,7 +28,7 @@ namespace DIIA_UATest.POM
             _webDriver.FindElement(_goToSelectedNews);
             return this;
         }
-          
+        
         public NewsSectionMainMenu GoToAllNewsPage()
         {
             _webDriver.FindElement(_goToAllNewsPage);

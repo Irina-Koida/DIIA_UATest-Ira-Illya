@@ -44,7 +44,7 @@ namespace DIIA_UATest.POM
             return this;
         }
 
-        public void ClickToSelectedNews() =>
+        public void ClickToSelectedNews(string firstNews) =>
             _webDriver.FindElement(_clickOnSelectedNews).Click();
 
         public PopularActualNews GoToSelectedNewsPage()
