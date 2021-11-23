@@ -21,8 +21,4 @@
     <PackageReference Include="WebDriverManager" Version="2.12.2" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Features\Osvita\" />
-  </ItemGroup>
-
 </Project>

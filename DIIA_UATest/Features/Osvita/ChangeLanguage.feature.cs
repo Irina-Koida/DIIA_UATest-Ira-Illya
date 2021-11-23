@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace DIIA_UATest.Features.MainMenu
+namespace DIIA_UATest.Features.Osvita
 {
     using TechTalk.SpecFlow;
     using System;
@@ -20,23 +20,23 @@ namespace DIIA_UATest.Features.MainMenu
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("FAQ Page")]
-    public partial class FAQPageFeature
+    [NUnit.Framework.DescriptionAttribute("Change language")]
+    public partial class ChangeLanguageFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "FAQPage.feature"
+#line 1 "ChangeLanguage.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/MainMenu", "FAQ Page", "As a visitor of site \r\nI want to easily find the FAQ page \r\nIn order to easily ge" +
-                    "t answers to my questions", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/Osvita", "Change language", "\tAs a visitor of site\r\n\tI want to manage Osvita Page language \r\n\tIn order to make" +
+                    " page information more understable to me", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -74,16 +74,25 @@ namespace DIIA_UATest.Features.MainMenu
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 6
+#line hidden
+#line 7
+ testRunner.Given("You are on Osvita page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+        }
+        
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Go to FAQ page from MainPage")]
-        [NUnit.Framework.CategoryAttribute("FAQ")]
-        public virtual void GoToFAQPageFromMainPage()
+        [NUnit.Framework.DescriptionAttribute("Change Osvita page language")]
+        [NUnit.Framework.CategoryAttribute("Osvita")]
+        public virtual void ChangeOsvitaPageLanguage()
         {
             string[] tagsOfScenario = new string[] {
-                    "FAQ"};
+                    "Osvita"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Go to FAQ page from MainPage", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 8
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Change Osvita page language", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 10
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -103,14 +112,17 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 9
- testRunner.When("I moved to FAQ block", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 10
- testRunner.When("I click on FAQ button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 6
+this.FeatureBackground();
 #line hidden
 #line 11
- testRunner.Then("I navigate to the FAQ Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I click to language swicher button from header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 12
+ testRunner.When("I see the page refresh", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 13
+ testRunner.Then("The text on Osvita page has change", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

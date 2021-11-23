@@ -3,17 +3,14 @@ As a visitor of site
 I want to easily find the FAQ page 
 In order to easily get answers to my questions
 
-Background:
-	Given Main page is open
 
 @FAQ
-Scenario: Go to FAQ page from Питання та відповіді Main Page block
-	When I moved to 'Питання та відповіді' block
-	When I click on 'Всі питання та відповіді' button
+Scenario: Go to FAQ page from MainPage 
+	When I moved to FAQ block
+	When I click on FAQ button
 	Then I navigate to the FAQ Page
-@FAQ
-Scenario: Go to FAQ page from Питання та відповіді block by clicking arrow
-	When I moved to 'Питання та відповіді' block
-	When I click on 'Arrow' button from 'Питання та відповіді'block
-	Then I navigate to the FAQ Page
-
+#@FAQ
+#Scenario: Go to FAQ page from MainPage by clicking arrow
+#	When I moved to FAQ block
+#	When I click on Arrow button from FAQ block
+#	Then I navigate to the FAQ Page

@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace DIIA_UATest.Features.MainMenu
+namespace DIIA_UATest.Features.Osvita
 {
     using TechTalk.SpecFlow;
     using System;
@@ -20,23 +20,26 @@ namespace DIIA_UATest.Features.MainMenu
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("FAQ Page")]
-    public partial class FAQPageFeature
+    [NUnit.Framework.DescriptionAttribute("")]
+    [NUnit.Framework.CategoryAttribute("Osvita")]
+    public partial class Feature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-        private string[] _featureTags = ((string[])(null));
+        private string[] _featureTags = new string[] {
+                "Osvita"};
         
-#line 1 "FAQPage.feature"
+#line 1 "RegistrationToDigigramTest.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/MainMenu", "FAQ Page", "As a visitor of site \r\nI want to easily find the FAQ page \r\nIn order to easily ge" +
-                    "t answers to my questions", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/Osvita", "", "Authorization form for Digigram testing \r\nAs a potential student\r\nI want  to ente" +
+                    "r my personal data\r\nIn order to be able to officially issue a certificate", ProgrammingLanguage.CSharp, new string[] {
+                        "Osvita"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -74,16 +77,27 @@ namespace DIIA_UATest.Features.MainMenu
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 8
+#line hidden
+#line 9
+ testRunner.Given("You are on the Osvita page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+        }
+        
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Go to FAQ page from MainPage")]
-        [NUnit.Framework.CategoryAttribute("FAQ")]
-        public virtual void GoToFAQPageFromMainPage()
+        [NUnit.Framework.DescriptionAttribute("Go to the start Digigigram testing")]
+        [NUnit.Framework.CategoryAttribute("Osvita")]
+        [NUnit.Framework.CategoryAttribute("GoDigigigramTest")]
+        public virtual void GoToTheStartDigigigramTesting()
         {
             string[] tagsOfScenario = new string[] {
-                    "FAQ"};
+                    "Osvita",
+                    "GoDigigigramTest"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Go to FAQ page from MainPage", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 8
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Go to the start Digigigram testing", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 12
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -103,14 +117,26 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 9
- testRunner.When("I moved to FAQ block", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 8
+this.FeatureBackground();
 #line hidden
-#line 10
- testRunner.When("I click on FAQ button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 13
+ testRunner.When("I Login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 11
- testRunner.Then("I navigate to the FAQ Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 14
+ testRunner.When("I click to Цифрограм buttom from header menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 15
+ testRunner.When("I click to Розпочати тестування button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 16
+ testRunner.When("I choose a test to exam", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 17
+ testRunner.When("I fill about info form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 18
+ testRunner.Then("I can start Digigram testing by clicking Перейти до тесту button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
