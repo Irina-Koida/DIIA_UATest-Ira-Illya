@@ -53,16 +53,10 @@ namespace DIIA_UATest.POM
             return this;
         }
             
-        public PopularActualNews SeeAActivePlaginationNextPage()
-        {
+        public bool SeeAActivePlaginationNextPage() =>
             _webDriver.FindElement(_plaginationNext).GetAttribute("class").Contains("active");
-            return this;
-        }   
-
-        public PopularActualNews SeeAActivePlaginationPreviousPage()
-        {
-            _webDriver.FindElement(_plaginationPrevious).GetAttribute("class").Contains("active");
-            return this;
-        }      
+          
+        public bool SeeAActivePlaginationPreviousPage() =>
+            _webDriver.FindElement(_plaginationPrevious).GetAttribute("class").Contains("active");       
     }
 }

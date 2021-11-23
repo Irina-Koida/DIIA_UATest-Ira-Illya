@@ -21,7 +21,7 @@ namespace DIIA_UATest.POM
         public void ClickOnSearchInformationField() =>
             _webDriver.FindElement(_clikOnSearchInfoButton).Click();
         
-        public string SearchInfoRequestText(string text) =>
+        public string SearchInfoRequestText() =>
             _webDriver.FindElement(_searchRequestTextInfo).Text;
     }
 }

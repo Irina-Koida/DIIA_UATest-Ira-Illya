@@ -58,19 +58,21 @@ namespace DIIA_UATest.Steps
         [Then(@"I navigate to the next page")]
         public void ThenINavigateToTheNextPage()
         {
-            _popularActualNews.SeeAActivePlaginationNextPage();
+           Assert.IsTrue(_popularActualNews.SeeAActivePlaginationNextPage());
         }
 
         [Then(@"I navigate to the previous page")]
         public void ThenINavigateToThePreviousPage()
         {
-            _popularActualNews.SeeAActivePlaginationPreviousPage();
+           Assert.IsTrue(_popularActualNews.SeeAActivePlaginationPreviousPage());
         }
 
         [Then(@"I navigate to the news page")]
         public void ThenINavigateToTheNewsPage()
         {
-            _popularActualNews.GoToSelectedNewsPage();
+            Assert.AreEqual("Мстислав Банік на Західній Україні: «Вражає швидкість," +
+                " з якою на місцях підтримали ініціативу створення офлайн-пунктів Команди підтримки Дії»",
+                _popularActualNews.GoToSelectedNewsPage());
         }
     }
 }

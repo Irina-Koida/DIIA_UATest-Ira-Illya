@@ -52,31 +52,31 @@ namespace DIIA_UATest.Steps
         [Then(@"I navigate to the service page")]
         public void ThenINavigateToTheServicePage()
         {
-            _popularServisesFromMainMenu.GoToToPopularServicePage();
+          Assert.AreEqual("COVID-сертифікат про вакцинацію", _popularServisesFromMainMenu.GoToToPopularServicePage());
         }
 
         [Then(@"Popular servises moved right on one position")]
         public void ThenPopularServisesMovedRightOnOnePosition()
         {
-            _popularServisesFromMainMenu.MovedToTheRight();
+            Assert.IsTrue(_popularServisesFromMainMenu.MovedToTheRight());
         }
 
         [Then(@"Popular servises moved left on one position")]
         public void ThenPopularServisesMovedLeftOnOnePosition()
         {
-            _popularServisesFromMainMenu.MovedToTheLeft();
+            Assert.IsTrue(_popularServisesFromMainMenu.MovedToTheLeft());
         }
 
         [Then(@"Popular services moved one position\.")]
         public void ThenPopularServicesMovedOnePosition_()
         {
-            _popularServisesFromMainMenu.MovedToTheRight();
+           Assert.IsTrue( _popularServisesFromMainMenu.MovedToTheRight());
         }
 
         [Then(@"Popular services moved one position to the left\.")]
         public void ThenPopularServicesMovedOnePositionToTheLeft_()
         {
-            _popularServisesFromMainMenu.MovedToTheLeft();
+            Assert.IsTrue(_popularServisesFromMainMenu.MovedToTheLeft());
         }
     }
 }
