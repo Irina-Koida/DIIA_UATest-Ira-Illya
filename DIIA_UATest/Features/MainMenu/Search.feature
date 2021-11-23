@@ -5,6 +5,7 @@
 
 Background:
 	Given Main page is open
+	Given Cookie is closed
 
 @valid
 Scenario: Check the search result witn valid input

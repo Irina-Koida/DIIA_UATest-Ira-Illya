@@ -1,13 +1,13 @@
 ﻿using OpenQA.Selenium;
 using TechTalk.SpecFlow;
 using DIIA_UATest.POM;
+using NUnit.Framework;
 
 namespace DIIA_UATest.Steps
 {
     [Binding]
     public class NewsSectionSteps
     {
-
         private readonly ScenarioContext _scenarioContext;
         private readonly NewsSectionMainMenu _newsSectionMainMenu;
         private readonly IWebDriver _webDriver;
@@ -18,7 +18,6 @@ namespace DIIA_UATest.Steps
             _webDriver = _scenarioContext.Get<IWebDriver>("WebDriver");
             _newsSectionMainMenu = new NewsSectionMainMenu(_webDriver);
         }
-
 
         [When(@"I click on the all news button")]
         public void WhenIClickOnTheAllNewsButton()
@@ -35,7 +34,7 @@ namespace DIIA_UATest.Steps
         [Then(@"I navigated to the news page")]
         public void ThenINavigatedToTheNewsPage()
         {
-            _newsSectionMainMenu.GoToAllNewsPage();
+           Assert.AreEqual( "Новини", _newsSectionMainMenu.GoToAllNewsPage());
         }
         
         [Then(@"I navigated to the selected news page")]
