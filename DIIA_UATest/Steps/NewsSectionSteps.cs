@@ -31,17 +31,20 @@ namespace DIIA_UATest.Steps
             _newsSectionMainMenu.ClickToSelectedNewsTitle(title);
         }
 
-        [Then(@"I navigated to the news page")]
-        public void ThenINavigatedToTheNewsPage()
+        [Then(@"I navigated to the news page ""(.*)""")]
+        public void ThenINavigatedToTheNewsPage(string newsPage)
         {
-           Assert.AreEqual( "Новини", _newsSectionMainMenu.GoToAllNewsPage());
+            string goToNews = _newsSectionMainMenu.GoToAllNewsPage(newsPage);
+            bool result = goToNews.Contains(newsPage);
+           Assert.AreEqual( actual: result, expected: true);
         }
 
-
         [Then(@"I navigated to the selected news ""(.*)""")]
-        public void ThenINavigatedToTheSelectedNews(string titleSelect)
+        public void ThenINavigatedToTheSelectedNews(string selectedNews)
         {
-            Assert.AreEqual(titleSelect, _newsSectionMainMenu.GoToSelectedNews());
+            string goToSelectedNews = _newsSectionMainMenu.GoToSelectedNews(selectedNews);
+            bool result = goToSelectedNews.Contains(selectedNews);
+            Assert.AreEqual(actual: result, expected: true);
         }
     }
 }

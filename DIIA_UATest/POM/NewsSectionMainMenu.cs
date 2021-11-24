@@ -1,16 +1,20 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
+using OpenQA.Selenium.Support.UI;
+using System;
 
 namespace DIIA_UATest.POM
 {
     class NewsSectionMainMenu
     {
         private readonly IWebDriver _webDriver;
+        private readonly Actions _action;
 
         public NewsSectionMainMenu(IWebDriver webDriver)
         {
             _webDriver = webDriver;
+            _action = new Actions(_webDriver);
         }
-
 
         private readonly By _clickOnAllNewsButton = By.XPath("//*[@id='layout-main']/section[4]/div/div[1]/div[2]/div/a/span");
         private readonly By _clickOnSelectedNewsTitle = By.XPath("//*[@id='layout-main']/section[4]/div/div[2]/div[2]/div/div[3]/div/div/a");
@@ -18,21 +22,19 @@ namespace DIIA_UATest.POM
         private readonly By _goToAllNewsPage = By.XPath("//*[@id='posts-container']/div[1]/div/h1");
 
         public void ClickAllNewsPageButton() =>
-            _webDriver.FindElement(_clickOnAllNewsButton).Click();
+           _action.MoveToElement(_webDriver.FindElement(_clickOnAllNewsButton)).Click().Perform();
 
         public void ClickToSelectedNewsTitle(string title) =>
-            _webDriver.FindElement(_clickOnSelectedNewsTitle).Click();
+         _action.MoveToElement(_webDriver.FindElement(_clickOnSelectedNewsTitle)).Click().Perform();
 
-        public NewsSectionMainMenu GoToSelectedNews()
+        public string GoToSelectedNews(string selectedNews)
         {
-            _webDriver.FindElement(_goToSelectedNews);
-            return this;
+            return _webDriver.FindElement(_goToSelectedNews).Text;  
         }
-        
-        public NewsSectionMainMenu GoToAllNewsPage()
+
+        public string GoToAllNewsPage(string newsPage)
         {
-            _webDriver.FindElement(_goToAllNewsPage);
-            return this;
-        }    
+           return _webDriver.FindElement(_goToAllNewsPage).Text;
+        }
     }
 }

@@ -9,8 +9,8 @@ Background:
 
 @popularservice @swiper
 Scenario: Check navigation to the service page from the block with popular service
-	When I click on the first "service"
-	Then I navigate to the service "page"
+	When I click on the first "COVID-сертифікат про вакцинацію"
+	Then I navigate to the service "COVID-сертифікат про вакцинацію"
 
 @swiper @popularservice
 Scenario: Check the swipe right the popular services by swiper - right button
