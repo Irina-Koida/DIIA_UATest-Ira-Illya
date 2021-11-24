@@ -52,31 +52,38 @@ namespace DIIA_UATest.Steps
         [Then(@"I navigate to the service ""(.*)""")]
         public void ThenINavigateToTheService(string servisePage)
         {
-            Assert.AreEqual(servisePage, _popularServisesFromMainMenu.GoToToPopularServicePage());
+            string navigate = _popularServisesFromMainMenu.GoToToPopularServicePage();
+            bool request = navigate.Contains(servisePage);
+
+            Assert.AreEqual(actual: request, expected: true);
         }
 
         [Then(@"Popular servises moved right on one position")]
         public void ThenPopularServisesMovedRightOnOnePosition()
         {
-            Assert.IsTrue(_popularServisesFromMainMenu.MovedToTheRight());
+            Assert.IsTrue(!_popularServisesFromMainMenu.MovedToTheRight());
         }
 
         [Then(@"Popular servises moved left on one position")]
         public void ThenPopularServisesMovedLeftOnOnePosition()
         {
-            Assert.IsTrue(_popularServisesFromMainMenu.MovedToTheLeft());
+            string redirectLeft = _popularServisesFromMainMenu.MovedToTheLeft();
+            bool result = redirectLeft.Contains(redirectLeft);
+            Assert.AreEqual(actual: result, expected: true);
         }
 
         [Then(@"Popular services moved one position\.")]
         public void ThenPopularServicesMovedOnePosition_()
         {
-           Assert.IsTrue( _popularServisesFromMainMenu.MovedToTheRight());
+           Assert.IsTrue(!_popularServisesFromMainMenu.MovedToTheRight());
         }
 
         [Then(@"Popular services moved one position to the left\.")]
         public void ThenPopularServicesMovedOnePositionToTheLeft_()
         {
-            Assert.IsTrue(_popularServisesFromMainMenu.MovedToTheLeft());
+            string redirectLeft = _popularServisesFromMainMenu.MovedToTheLeft();
+            bool result = redirectLeft.Contains(redirectLeft);
+            Assert.AreEqual(actual: result, expected: true);
         }
     }
 }

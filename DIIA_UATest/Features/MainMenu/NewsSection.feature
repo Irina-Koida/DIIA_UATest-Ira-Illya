@@ -10,9 +10,9 @@ Background:
 @newssection
 Scenario: Check navigation to the news page from the block with news
 	When I click on the all news button
-	Then I navigated to the news page
+	Then I navigated to the news page "Новини"
 
 @newssection
 Scenario: Check navigation to the select news page from the block with news
-	When I click on the selected news "title"
-	Then I navigated to the selected news "page"
+	When I click on the selected news "COVID-сертифікат у Дії стане отримати простіше: що змінилося"
+	Then I navigated to the selected news "COVID-сертифікат у Дії стане отримати простіше: що змінилося"

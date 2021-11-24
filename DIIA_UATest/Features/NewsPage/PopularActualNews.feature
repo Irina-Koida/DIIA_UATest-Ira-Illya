@@ -26,5 +26,5 @@ Scenario: Check the navigation to the previous page by click the "Previous page"
 
 @news
 Scenario: Check navigation to the news page from the block with news
-	When I click on the "first news"
-	Then I navigate to the "news page"
+	When I click on the "Мстислав Банік на Західній Україні: «Вражає швидкість, з якою на місцях підтримали ініціативу створення офлайн-пунктів Команди підтримки Дії»"
+	Then I navigate to the "Мстислав Банік на Західній Україні: «Вражає швидкість, з якою на місцях підтримали ініціативу створення офлайн-пунктів Команди підтримки Дії»"

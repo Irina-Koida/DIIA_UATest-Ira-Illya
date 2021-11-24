@@ -52,25 +52,32 @@ namespace DIIA_UATest.Steps
         [Then(@"The pagination number of next page are active")]
         public void ThenThePaginationNumberOfNextPageAreActive()
         {
-            _popularActualNews.SeeAActivePlaginationNextPage();
+           string redirectNextPage = _popularActualNews.SeeAActivePlaginationNextPage();
+           bool result = redirectNextPage.Contains(redirectNextPage);
+           //Assert.AreEqual(true, redirectNextPage);
+           Assert.AreEqual(actual: result, expected: true);
         }
 
         [Then(@"I navigate to the next page")]
         public void ThenINavigateToTheNextPage()
         {
-           Assert.IsTrue(_popularActualNews.SeeAActivePlaginationNextPage());
+           string redirectNext = _popularActualNews.SeeAActivePlaginationNextPage();
+           bool result = redirectNext.Contains(redirectNext);
+           Assert.AreEqual(actual: result, expected: true);
         }
 
         [Then(@"I navigate to the previous page")]
         public void ThenINavigateToThePreviousPage()
         {
-           Assert.IsTrue(_popularActualNews.SeeAActivePlaginationPreviousPage());
+            string redirectPrevious = _popularActualNews.SeeAActivePlaginationPreviousPage();
+            bool result = redirectPrevious.Contains(redirectPrevious);
+            Assert.AreEqual(actual: result, expected: true);
         }
 
         [Then(@"I navigate to the ""(.*)""")]
         public void ThenINavigateToThe(string selectedNewsPage)
         {
-            Assert.AreEqual(selectedNewsPage, _popularActualNews.GoToSelectedNewsPage());
+            Assert.AreEqual(actual: _popularActualNews.GoToSelectedNewsPage(selectedNewsPage) , expected: selectedNewsPage);
         }
     }
 }

@@ -17,4 +17,4 @@ Scenario: Check the search result witn valid input
 Scenario: Check the search results page for the content of the message if invalid values are entered
 	When I input "FOP" in the search field
 	When I click a search button
-	Then I see a open  search page with text "За вашим запитом не знайдено матеріалів"
+	Then I see a open  search page with text invalid "За вашим запитом не знайдено матеріалів"
